@@ -681,7 +681,7 @@ function getActsForGrade(grade){
     if(g.includes("1,2,3학년")) return true;
     if(grade===1&&(g.includes("1학년")||g.includes("1,2학년"))) return true;
     if(grade===2&&(g.includes("2학년")||g.includes("1,2학년"))) return true;
-    if(grade===3&&g.includes("3학년")) return true;
+    if(grade===3&&(g.includes("3학년")||g.includes("1,2,3학년"))) return true;
     return false;
   });
 }
@@ -694,7 +694,7 @@ function getFiltered(panel){
     if(g.includes("1,2,3학년")) return true;
     if(grade===1&&(g.includes("1학년")||g.includes("1,2학년"))) return true;
     if(grade===2&&(g.includes("2학년")||g.includes("1,2학년"))) return true;
-    if(grade===3&&g.includes("3학년")) return true;
+    if(grade===3&&(g.includes("3학년")||g.includes("1,2,3학년"))) return true;
     return false;
   });
   if(curFilter!=="all") list=list.filter(a=>a.area===curFilter);
